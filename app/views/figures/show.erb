@@ -1,0 +1,21 @@
+<h1 align='center'><u><%= @figure.name %></u></h1>
+  <a href='/figures/<%= @figure.id %>/edit'>Edit</a>
+  <table align='center'>
+    <tr>
+      <th>Landmarks</th>
+      <th>Titles</th>
+    </tr>
+    <tr>
+      <td><ul>
+        <% @figure.landmarks.each do |landmark| %>
+          <li><a href='/landmarks/<%= landmark.id %>'><%= landmark.name %></a></li>
+        <% end %>
+      </ul></td>
+
+      <td><ul>
+        <% @figure.titles.each do |title| %>
+          <li><%= title.name %></li>
+        <% end %>
+      </ul></td>
+    </tr>
+  </table>

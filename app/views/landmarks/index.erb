@@ -1,0 +1,14 @@
+<h1 align='center'><u>Landmarks</u></h1>
+
+  <table align='center'>
+    <tr>
+      <strong><th>Name</th></strong>
+      <strong><th>Year Completed</th></strong>
+    </tr>
+    <% @landmarks.each do |landmark| %>
+    <tr>
+      <td width='200' align='center'><a href='/landmarks/<%= landmark.id %>'><%= landmark.name %></a></td>
+      <td width='200' align='center'><%= landmark.year_completed %></td>
+    </tr>
+    <% end %>
+  <table>
